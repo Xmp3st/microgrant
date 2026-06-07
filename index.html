@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>新闻鉴证专家 · 苏格拉底式AI | 模块化设计</title>
+    <!-- 主样式表 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 可选: Google Fonts 提前加载 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="forensic-container" id="app">
+    <div class="dashboard">
+        <!-- 左侧新闻实证区块: 待鉴证内容 (可配置数据模型) -->
+        <div class="evidence-panel" id="evidencePanel">
+            <!-- 动态内容将通过 JS 渲染, 支持修改新闻数据 -->
+        </div>
+
+        <!-- 右侧苏格拉底式AI对话 -->
+        <div class="chat-panel">
+            <div class="chat-header">
+                <div class="ai-title">
+                    <div class="ai-icon">⚖️</div>
+                    <div class="ai-name">新闻鉴证专家 · 苏格拉底模式</div>
+                </div>
+                <div class="scaffold-badge">🧩 支架式引导 | 拒绝认知卸载</div>
+            </div>
+            <div class="messages-area" id="chatMessages">
+                <!-- 动态消息列表 -->
+            </div>
+            <div class="input-area">
+                <div class="strategy-note" id="strategyNote">
+                    🧠 策略提示: 我会采用引导式提问 / 深度追问 · 而非直接揭露答案
+                </div>
+                <div class="input-group">
+                    <textarea id="userInput" rows="2" placeholder="分享你的看法、证据或疑问... 例如: 我觉得图像可能是天然的雪山山峰…"></textarea>
+                    <button id="sendBtn">✍️ 发送</button>
+                </div>
+                <div class="info-footer" id="infoFooter">
+                    🔍 真实信息来源提示：南极所谓的“金字塔”实为冰雪覆盖的山峰（如“金字塔山”），并无考古证据。本对话模拟基于事实推理，但AI将引导您自我发现。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 模块化 JavaScript: 依次加载 (便于维护, 解耦) -->
+<script src="config.js"></script>
+<script src="newsData.js"></script>
+<script src="aiStrategy.js"></script>
+<script src="chatUI.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
